@@ -33,12 +33,16 @@ Article.prototype.toHtml = function() {
     3. article title,
     4. article body, and
     5. publication date. */
-  $('.template').append(this.title);
-  $('.template').append(this.category);
-  $('.template').append(this.author);
-  $('.template').append(this.authorUrl);
-  $('.template').append(this.publishedOn);
-  $('.template').append(this.body);
+  $('.template').find('h1').html(this.title);
+  $('.template').find('address').html(this.author);
+  $('.template').find('href').html(this.authorUrl);
+  $('.template').find('time').html(this.publishedOn);
+  $('.template').find('section').html(this.body);
+  // $('.template').append(this.category);
+  // $('.template').append(this.author);
+  // $('.template').append(this.authorUrl);
+  // $('.template').append(this.publishedOn);
+  // $('.template').append(this.body);
 
 
 
